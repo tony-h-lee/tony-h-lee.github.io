@@ -1,0 +1,210 @@
+/* 
+   CSS Reset
+   http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+
+/* * * Base CSS * * */
+
+
+p {
+	cursor: default;
+}
+
+.headerName {
+	margin-top: 100px;
+	text-align: center;
+	font-family: "ultimahairline";
+	font-size: 6em;
+}
+
+.projectTitle {
+	margin-top: 100px;
+	text-align: center;
+	font-family: "ultima";
+	font-size: 5em;
+}
+
+#school {
+	padding: 20px;
+}
+
+.headerText {
+	text-align: center;
+	font-family: "ultima";
+	font-size: 2em;
+	font-weight: bold;
+	margin-top: 30px;
+}
+
+.headerSchool {
+	text-align: center;
+	font-family: "ultimahairline";
+	font-size: 2em;
+	font-weight: bold;
+	padding-top: 30px;
+}
+
+#center {
+	margin-top: 40px;
+}
+
+iframe, img {
+	border-style: solid;
+	border-width: 10px;
+	border-color: #FFFFFF;
+  	max-width: 100% !important;
+}
+
+#stubsSlides {
+	position: relative;
+	width: 740px;
+	height: 480px;
+}
+
+#hbSlides {
+	position: relative;
+	width: 740px;
+	height: 480px;
+}
+
+img {
+	position:absolute; 
+	left:0; 
+	top:0;
+}
+
+.footer {
+	height: 60px;
+}
+
+.footDesc {
+	text-align: center;
+	font-family: "ultima";
+	font-size: 2em;
+	font-weight: bold;
+	margin-top: 30px;
+}
+
+.hidden {
+	display: none;
+}
+
+
+/* Flexbox */
+
+#projectContainer {
+
+	-webkit-box-shadow: inset 0 20px 20px -20px rgba(0,0,0,0.8),
+						inset 0 -20px 20px -20px rgba(0,0,0,0.8);
+    -moz-box-shadow: inset 0 20px 20px -20px rgba(0,0,0,0.8),
+    				inset 0 -20px 20px -20px rgba(0,0,0,0.8);
+    box-shadow: inset 0 20px 20px -20px rgba(0,0,0,0.8),
+    			inset 0 -20px 20px -20px rgba(0,0,0,0.8);
+
+	margin-top: 30px;
+    padding: 100px;
+    background: #e6e6e6;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+}
+
+.projectItem {
+	margin: 30px;
+	min-width: 400px;
+	max-width: 800px;
+}
+
+
+/* Project item description */
+
+.projTitle {
+	text-align: center;
+	font-family: "ultimahairline";
+	font-size: 3em;
+	font-weight: bold;
+}
+
+.descript {
+	font-family: "ultimahairline";
+	font-size: 2em;
+	font-weight: bold;
+}
+
+.descriptCenter {
+	text-align: center;
+	font-family: "ultimahairline";
+	font-size: 2em;
+	font-weight: bold;
+}
+
+.descriptTech {
+	margin-top: 40px;
+	font-family: "ultimahairline";
+	font-size: 2em;
+	font-weight: bold;
+}
+
+
+
+
+
+
+
+
+@font-face {
+   font-family: ultimahairline; 
+   src: url('ultimahairline.ttf');
+}
+
+@font-face {
+   font-family: ultima; 
+   src: url('ultima.ttf');
+}
