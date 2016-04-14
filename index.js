@@ -7,7 +7,7 @@ $(document).ready(function() {
 	 for each separate project.
 	*/
 
-	$(['stubs2.jpg','stubs3.jpg','stubs4.jpg','stubs5.jpg','hb1.jpg','hb2.jpg','hb3.jpg']).preload();
+	$(['stubs2.png','stubs3.png','stubs4.png','stubs5.png','hb1.png','hb2.png','hb3.png']).preload();
 
 	$('#stubsSlides img:gt(0)').hide();
 
