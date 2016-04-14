@@ -68,11 +68,11 @@ p {
 
 .projectTitle {
 	padding-top: 50px;
-	margin-top: 100px;
+	margin-top: 80px;
 	text-align: center;
 	font-family: "ultima";
 	font-size: 5em;
-	padding-bottom: 80px;
+	padding-bottom: 40px;
 }
 
 #school {
@@ -117,14 +117,14 @@ iframe {
 #stubsSlides {
 	margin-top: 50px;
 	position: relative;
-	width: 580px;
+	width: 600px;
 	height: 300px;
 }
 
 #hbSlides {
 	margin-top: 50px;
 	position: relative;
-	width: 580px;
+	width: 600px;
 	height: 300px;
 }
 
@@ -166,20 +166,21 @@ img {
     display: flex;
     flex-flow: row wrap;
     justify-content: space-around;
+
 }
 
 .projectItem {
 	margin: 20px;
-	min-width: 600px;
+	min-width: 500px;
 	max-width: 600px;
 	margin-bottom: 40px;
 }
 
 .projectItemDesc {
 	margin: 20px;
-	min-width: 600px;
+	min-width: 500px;
 	max-width: 600px;
-	padding-bottom: 230px;
+	padding-bottom: 200px;
 }
 
 
@@ -213,12 +214,6 @@ img {
 }
 
 
-
-
-
-
-
-
 @font-face {
    font-family: ultimahairline; 
    src: url('ultimahairline.ttf');
@@ -227,4 +222,36 @@ img {
 @font-face {
    font-family: ultima; 
    src: url('ultima.ttf');
+}
+
+
+
+@media (max-width: 1300px) {
+
+	#stubsSlides {
+
+		width: 500px;
+
+	}
+
+	#hbSlides {
+
+		width: 500px;
+
+	}
+
+	.projectItem {
+
+		max-width: 500px;
+
+	}
+
+	.projectItemDesc {
+
+		max-width: 500px;
+
+	}
+
+
+
 }
