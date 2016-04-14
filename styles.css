@@ -60,10 +60,12 @@ p {
 }
 
 .headerName {
+	position: relative;
 	margin-top: 100px;
 	text-align: center;
 	font-family: "ultimahairline";
 	font-size: 6em;
+	z-index: 100;
 }
 
 .projectTitle {
@@ -80,6 +82,8 @@ p {
 }
 
 .headerText {
+	position: relative;
+	z-index: 100;
 	text-align: center;
 	font-family: "ultima";
 	font-size: 2em;
@@ -88,6 +92,8 @@ p {
 }
 
 .headerSchool {
+	position: relative;
+	z-index: 100;
 	text-align: center;
 	font-family: "ultimahairline";
 	font-size: 2em;
@@ -105,6 +111,20 @@ p {
 	background: #FAFAFA;
 	padding-top: 80px;
 	padding-bottom: 90px;
+}
+
+.cn {
+	position: absolute;
+	top: 50px;
+	left: 15%;
+	z-index: 0;
+}
+
+.skyline {
+	position: absolute;
+	top: 835px;
+	left: 60%;
+	z-index: 0;
 }
 
 iframe {
@@ -163,17 +183,6 @@ iframe {
 	margin-top: 15px;
 
 }
-
-#githubBlue {
-	opacity:0;
-    -webkit-transition: opacity .25s ease;
-    -moz-transition: opacity .25s ease;
-}
-
-#github:hover #githubBlue{
-	opacity:1;	
-}
-
 
 /* Flexbox */
 
@@ -272,5 +281,24 @@ iframe {
 	}
 
 
+}
 
+
+@media (max-width: 1100px) {
+
+	.cn {
+		display:none;
+	}
+
+	.skyline {
+		display:none;
+	}
+
+}
+
+@media (max-width: 600px) {
+
+	#github {
+		display: none;
+	}
 }
