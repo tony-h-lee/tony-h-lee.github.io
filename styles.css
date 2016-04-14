@@ -178,10 +178,20 @@ iframe {
 }
 
 #github {
+	color: #000000;
 	position: absolute;
 	margin-left: 80px;
 	margin-top: 15px;
 
+	-webkit-transition: all 0.25s ease;
+	-moz-transition: all 0.25s ease;
+	-o-transition: all 0.25s ease;
+	-ms-transition: all 0.25s ease;
+
+}
+
+#github:hover {
+	color: #1f7a7a;
 }
 
 /* Flexbox */
