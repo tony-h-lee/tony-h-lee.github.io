@@ -38,7 +38,7 @@ $(document).ready(function() {
 
 function loop() {
 
-    var rand = Math.round(Math.random() * (4000)) + 2000;
+    var rand = Math.round(Math.random() * (3000)) + 2000;
     setTimeout(function() {
 
     		$('#stubsSlides :first-child').fadeOut()
@@ -52,7 +52,7 @@ function loop() {
 
 function loop2() {
 
-    var rand2 = Math.round(Math.random() * (4000)) + 2000;
+    var rand2 = Math.round(Math.random() * (3000)) + 2000;
 
     setTimeout(function() {
 
