@@ -128,10 +128,9 @@ p {
 }
 
 iframe {
-	border-style: solid;
-	border-width: 10px;
-	border-color: #FFFFFF;
+	position: relative;
   	max-width: 100% !important;
+  	top: -50px;
 }
 
 #stubsSlides {
@@ -218,7 +217,7 @@ iframe {
 	margin: 20px;
 	min-width: 500px;
 	max-width: 600px;
-	padding-bottom: 200px;
+	padding-bottom: 250px;
 }
 
 
