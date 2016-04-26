@@ -2,133 +2,273 @@
 
 <html>
 
-	<title> Tony's Portfolio </title>
+	<head>
 
-	<link rel="stylesheet" type="text/css" href="styles.css"/>
+		<title> Tony's Portfolio </title>
 
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
+		<link href='https://fonts.googleapis.com/css?family=Play' rel='stylesheet' type='text/css'>
 
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+		<link rel="stylesheet" type="text/css" href="styles.css"/>
 
-	<script src="index.js"> </script>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
+
+	</head>
+
 
 	<body>
 
-		<div id="info">
+		<div id="cpuWires">
 
-			<p class="headerName"> TONY H. LEE</p>
+			<svg id="wires" height="100%" width="400px">
 
-			<p class="headerText"> tony.hj.lee@gmail.com </p>
+  				<polyline class="aboutContentWire active" points="10,0 10,30 60,60 60,300" />
+  				<polyline class="aboutContentWire active" points="20,0 20,25 70,55 70,300" />
+  				<polyline class="aboutContentWire active" points="30,0 30,20 80,50 80,300" />
+  				<polyline class="aboutContentWire active" points="40,0 40,15 90,45 90,300" />
 
-			<br>
-			
-			<div id="school">
 
-				<p class="headerSchool"> Computer Science at the University of Toronto </p>
+  				<polyline class="skillsContentWire" points="145,0 145,30 175,60 175,300" />
+  				<polyline class="skillsContentWire" points="155,0 155,27 185,57 185,300" />
+  				<polyline class="skillsContentWire" points="165,0 165,24 195,54 195,300" />
+
+  				<polyline class="skillsContentWire" points="235,0 235,24 205,54 205,300" />
+  				<polyline class="skillsContentWire" points="245,0 245,27 215,57 215,300" />
+  				<polyline class="skillsContentWire" points="255,0 255,30 225,60 225,300" />
+
+
+  				<polyline class="projectsContentWire" points="350,0 350,27 300,57 300,300" />
+  				<polyline class="projectsContentWire" points="360,0 360,31 310,61 310,300" />
+  				<polyline class="projectsContentWire" points="370,0 370,35 320,65 320,300" />
+  				<polyline class="projectsContentWire" points="380,0 380,39 330,69 330,300" />
+
+
+			</svg>
+
+		</div>
+
+		<div id="cpu">
+
+			<div id="tab-links">
+
+				<div id="about" class="tab-link active">
+
+					<a class="langTitle" href="#aboutContent"> About </a>
+					<br>
+					<a class="langAbbr" href="#aboutContent"> [ABT] </a>
+
+				</div>
+
+				<div id="lang" class="tab-link">
+
+					<a class="langTitle" href="#skillsContent"> Skills </a>
+					<br>
+					<a class="langAbbr" href="#skillsContent"> [SKL] </a>
+
+				</div>
+
+				<div id="proj" class="tab-link">
+
+					<a class="langTitle" href="#projectsContent"> Projects </a>
+					<br>
+					<a class="langAbbr" href="#projectsContent"> [PROJ] </a>
+
+				</div>
+
+			</div>
+
+
+			<div class="tab-content">
+
+				<div id="aboutContent" class="tab active">
+
+					<h1 class="cpuTitle"> Tony H. Lee </h1>
+
+					<hr NOSHADE>
+
+					<p class="cpuText"> An aspiring web-developer and enthusiast of design and software engineering. I am currently studying computer science at the University of Toronto. </p>
+
+					<div class="git">
+
+						<i id="github" class="fa fa-github fa-3x" aria-hidden="true"></i>
+
+						<i id="bitbucket" class="fa fa-bitbucket fa-3x" aria-hidden="true"></i>
+
+					</div>
+
+					<p class="cpuMail"> tony.hj.lee@gmail.com </p>
+
+				</div>
+
+
+
+				<div id="skillsContent" class="tab">
+
+					<h1 class="cpuTitle"> Skills </h1>
+
+					<hr NOSHADE>
+
+					<br>
+
+					<p class="cpuTextSkill"> C, Java, Python </p>
+					<p class="cpuTextSkill"> HTML, CSS, Javascript (JQuery), NodeJS</p>
+					<p class="cpuTextSkill"> SQL, MongoDB, XML, JSON, XQuery </p>
+					<p class="cpuTextSkill"> Express, AngularJS, Bootstrap </p>
+					<p class="cpuTextSkill"> Git, SVN </p>
+
+
+				</div>
+
+
+
+				<div id="projectsContent" class="tab">
+
+					<h1 class="cpuTitle"> Projects </h1>
+
+					<hr NOSHADE>
+
+					<br>
+
+					<p id="stubs" class="projText"> Stubs </p>
+
+					<p id="lots" class="projText"> Legacy of the Sun </p>
+
+					<p id="bee" class="projText"> Hungry Bee </p>
+
+
+
+				</div>
+
+
+
 
 			</div>
 
 		</div>
 
-		<div id="center">
+		<div id="footer">
 
-			<img class="cn" width="68" height="500" alt="cn tower" src="cntower.png">
-
-			<p class ="headerText"> C Java Python</p>
-
-			<p class ="headerText"> HTML CSS Javascript</p>
-
-			<p class ="headerText"> MongoDB Express Angular NodeJS SQL</p>
-
-			<p class ="headerText"> Git SVN</p>
+			<p class="footerText">  &#169; Copyright 2016 Tony H. Lee </p>
 
 		</div>
 
 
-		<p class="projectTitle"> Projects </p>
+		<div id="stubModal" class="modal">
 
-		<img class="skyline" width="400" height="123" alt="skyline" src="skyline.png">
+			<div class="modal-content">
 
-		<div id="projectContainer">
+				<div class="modal-header">
+					<span class="close">&times;</span>
+					<h2 id="stubsTitle"> Stubs </h2>
+					
+				</div>
 
-			<div id="stubsSlides" class="projectItem">
+				<div class="modal-body">
+					<p> This is a CRUD app developed by myself and four other students for a group project. Users can search for group members based on criteria as well as an option to join a group of randomly selected users within a first come first serve queue. </p>
+					<br>
+					<p> It is a single-page application developed with NodeJS and the Express framework. Backend data storage is handled by MongoDB and the Mongoose module for NodeJS. The queue system is built from the socket.io module. </p>
 
-				<img class="demoPic" width="600" height="300" alt="stubs" src="stubs2.png">
-				<img class="demoPic" width="600" height="300" alt="stubs" src="stubs3.png">
-				<img class="demoPic" width="600" height="300" alt="stubs" src="stubs5.png">
-				<img class="demoPic" width="600" height="300" alt="stubs" src="stubs4.png">
+					<div class="stubPics">
 
-			</div>
+						<img class="demoPic" width="600" height="300" alt="stubs" src="stubs5.png">
 
+						<img class="demoPic" width="600" height="300" alt="stubs" src="stubs3.png">
 
-			<div class="projectItemDesc">
+					</div>
 
-				<p class="projTitle"> Stubs </p>
-
-				<br><br>
-
-				<p class="descript"> A student CRUD app that lets users search for group members. There is also a feature that lets users search in a first come first serve queue system.
-
-				<p class="descriptTech"> NodeJS MongoDB Express Jade Templating Engine Bootstrap JQuery
-
-			</div>
-
-
-			<div class="projectItem">
-
-				<iframe width="600" height="480" src="https://www.youtube.com/embed/u35HhVE69IE?rel=0"></iframe>
-
-			</div>
-
-
-			<div class="projectItemDesc">
-
-				<p class="projTitle"> Legacy of the Sun </p>
-
-				<br>
-
-				<p class="descriptCenter"> In Progress </p>
-
-				<br>
-
-				<p class="descript"> An online card game that uses the socket.io module for client-server communication. Implements responsive design and can also be played on various mobile devices.
-
-				<p class="descriptTech"> NodeJS MongoDB Express JQuery Bootstrap
-
-			</div>
-
-
-			<div id="hbSlides" class="projectItem">
-
-				<img class="demoPic" width="600" height="300" alt="stubs" src="hb1.png">
-				<img class="demoPic" width="600" height="300" alt="stubs" src="hb2.png">
-				<img class="demoPic" width="600" height="300" alt="stubs" src="hb3.png">
-
-			</div>
-
-
-			<div class="projectItemDesc">
-
-				<p class="projTitle"> Hungry Bee </p>
-
-				<br><br>
-
-				<p class="descript"> A simple mouse clicking game made with HTML Canvas and Javascript.
-
-				<p class="descriptTech"> Javascript Canvas
+				</div>
 
 			</div>
 
 		</div>
 
 
-		<div class="footer">
 
-			<p class="footDesc"> &#169; Copyright 2016 Tony H. Lee </p>
 
-			<a href="https://github.com/tony-h-lee">
-				<i id="github" class="fa fa-github-square fa-4x"></i>
-			</a>
+		<div id="lotsModal" class="modal">
+
+			<div class="modal-content">
+
+				<div class="modal-header">
+					<span class="close">&times;</span>
+					<h2 id="stubsTitle"> Legacy of the Sun </h2>
+					
+				</div>
+
+				<div class="modal-body">
+					<p> An online card game between two players. Constructed with NodeJS and primarily uses AJAX and socket events for client-server synchronization. This is the project that showed me the disadvantages of not utilizing frameworks such as AngularJS, React, or VueJS, as the data-binding would have came in handy when trying to maintain transparency of the client-server interaction for users.</p>
+					<br>
+					<p> Implements responsive design and can be played on various mobile devices. </p>
+
+					<div class="stubPics">
+
+						<iframe id="youtube" width="800" height="480" src="https://www.youtube.com/embed/u35HhVE69IE?enablejsapi=1&rel=0"></iframe>
+
+					</div>
+
+				</div>
+
+			</div>
+
+		</div>
+
+
+
+
+		<div id="tempModal" class="modal">
+
+			<div class="modal-content">
+
+				<div class="modal-header">
+					<span class="close">&times;</span>
+					<h2 id="stubsTitle"> tmp </h2>
+					
+				</div>
+
+				<div class="modal-body">
+					<p> placeholder </p>
+					<br>
+					<p> placeholder bonus </p>
+
+					<div class="stubPics">
+
+
+
+					</div>
+
+				</div>
+
+			</div>
+
+		</div>
+
+
+
+		<div id="hbModal" class="modal">
+
+			<div class="modal-content">
+
+				<div class="modal-header">
+					<span class="close">&times;</span>
+					<h2 id="stubsTitle"> Hungry Bee </h2>
+					
+				</div>
+
+				<div class="modal-body">
+					<p> A mouse clicking game that requires the player to prevent bees from reaching spawned candy for the duration of a timer. The graphics were implemented with HTML Canvas and the game logic with javascript. </p>
+					<br>
+					<p> This was my first project with html, css, and javascript. </p>
+
+					<div class="stubPics">
+
+						<img class="demoPic" width="600" height="300" alt="stubs" src="hb1.png">
+
+						<img class="demoPic" width="600" height="300" alt="stubs" src="hb2.png">
+
+					</div>
+
+				</div>
+
+			</div>
 
 		</div>
 
@@ -139,12 +279,14 @@
 
 
 
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
 
-
-
-
+		<script src="index.js"> </script>
 
 	</body>
+
+
+
 
 
 </html>

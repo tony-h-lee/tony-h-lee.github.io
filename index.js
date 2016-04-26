@@ -1,71 +1,85 @@
-// Tony Hongjin Lee's Portfolio
-
 $(document).ready(function() {
 
-	/*
-	 Preload images and set a randomized delay before looping through pictures
-	 for each separate project.
-	*/
-
-	$(['stubs2.png','stubs3.png','stubs4.png','stubs5.png','hb1.png','hb2.png','hb3.png']).preload();
-
-	$('#stubsSlides img:gt(0)').hide();
-
-	$('#hbSlides img:gt(0)').hide();
 
 
-	setTimeout(function() {
-
-		loop();
-
-	}, Math.random()*4000 + 1000 );
+  $(['stubs3.png', 'stubs5.png','hb1.png','hb2.png','hb3.png']).preload();
 
 
+  /*
+   * Tab and content
+   */
 
-	setTimeout(function() {
+	$('#cpu #tab-links .tab-link a').on('click', function(e)  {
 
-		loop2();
+        var currentAttrValue = jQuery(this).attr('href');
 
-	}, Math.random()*4000 + 1000 );
+ 
+        // Show/Hide Tabs
+        $('.tab-content ' + currentAttrValue).fadeIn(400).siblings().hide();
+
+
+       	if(currentAttrValue == "#aboutContent") {
+       		$(".skillsContentWire, .projectsContentWire").hide();
+       		$(".aboutContentWire").fadeIn(1000);
+   
+       	}
+
+       	else if(currentAttrValue == "#skillsContent") {
+       		$(".aboutContentWire, .projectsContentWire").hide();
+       		$(".skillsContentWire").fadeIn(1000);
+       	}
+
+       	else if(currentAttrValue == "#projectsContent") {
+       		$(".skillsContentWire, .aboutContentWire").hide();
+       		$(".projectsContentWire").fadeIn(1000);
+       	}
+ 
+        // Change/remove current tab to active
+        $(this).parent('.tab-link').addClass('active').siblings().removeClass('active');
+ 
+        e.preventDefault();
+
+
+    });
+
+
+
+    /*
+     * Modal
+     */
+    $("#stubs").on('click', function() {
+        $("#stubModal").fadeIn(400);
+    });
+
+
+    $("#lots").on('click', function() {
+        $("#lotsModal").fadeIn(400);
+    });
+
+
+    $("#bee").on('click', function() {
+        $("#hbModal").fadeIn(400);
+    });
+
+
+
+    $(".close").on('click', function() {
+        $('#youtube')[0].contentWindow.postMessage('{"event":"command","func":"' + 'stopVideo' + '","args":""}', '*');
+        $(".modal").fadeOut(200);
+    });
+
+    window.onclick = function(event) {
+        if ($(event.target).hasClass("modal")) {
+            $('#youtube')[0].contentWindow.postMessage('{"event":"command","func":"' + 'stopVideo' + '","args":""}', '*');
+            $(event.target).fadeOut(200);
+        }
+    }
+
 
 
 
 });
 
-
-
-// Loop functions to generate new random interval. Performed recursively.
-
-function loop() {
-
-    var rand = Math.round(Math.random() * (3000)) + 2000;
-    setTimeout(function() {
-
-    		$('#stubsSlides :first-child').fadeOut()
-	 			.next('img').fadeIn()
-	 			.end().appendTo('#stubsSlides');
-
-            loop();  
-    }, rand);
-
-}
-
-function loop2() {
-
-    var rand2 = Math.round(Math.random() * (3000)) + 2000;
-
-    setTimeout(function() {
-
-    		$('#hbSlides :first-child').fadeOut()
-	 			.next('img').fadeIn()
-	 			.end().appendTo('#hbSlides');
-
-            loop2();  
-    }, rand2);
-
-}
-
-// Image Preload on StackOverflow
 
 $.fn.preload = function() {
     this.each(function(){

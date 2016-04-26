@@ -49,266 +49,317 @@ table {
 	border-spacing: 0;
 }
 
-
-/* * * Base CSS * * */
+/********** BASE CSS **********/
 
 body {
-	background: #cccccc;
+	background: #2d8659;
 }
-p {
+
+p, h1, h2, h3 {
 	cursor: default;
 }
 
-.headerName {
-	position: relative;
-	margin-top: 100px;
-	text-align: center;
-	font-family: "ultimahairline";
-	font-size: 6em;
-	z-index: 100;
+hr {
+	border-top: 1px solid #1a1a1a;
+	width: 55%;
 }
 
-.projectTitle {
-	padding-top: 50px;
-	margin-top: 80px;
-	text-align: center;
-	font-family: "ultima";
-	font-size: 5em;
-	padding-bottom: 40px;
+a {
+	text-decoration: none;
 }
 
-#school {
-	padding: 20px;
+#cpu {
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	border-radius: 20px;
+	box-shadow: 5px 3px 0px #1a1a1a;
+
+	height: 500px;
+	width: 400px;
+
+	background: #333333;
 }
 
-.headerText {
-	position: relative;
-	z-index: 100;
+.cpuTitle {
+	padding: 30px;
+	font-size: 3em;
+	font-family: 'Play', sans-serif;
 	text-align: center;
-	font-family: "ultima";
-	font-size: 2em;
-	font-weight: bold;
+	color: #a6a6a6;
+}
+
+.cpuText {
+	line-height: 150%;
+	padding: 30px;
+	font-family: 'Play', sans-serif;
+	font-size: 1.1em;
+	text-align: center;
+	color: #a6a6a6;
+}
+
+.cpuTextSkill {
+	line-height: 150%;
+	padding: 10px;
+	margin-left: 20px;
+	font-family: 'Play', sans-serif;
+	font-size: 1.1em;
+	text-align: center;
+	color: #a6a6a6;
+}
+
+.projText {
+	float: left;
+	clear: both;
+	line-height: 150%;
+	margin: 15px;
+	margin-left: 30px;
+	font-family: 'Play', sans-serif;
+	font-size: 1.5em;
+	color: #a6a6a6;
+	cursor: pointer;
+
+	-webkit-transition: all 0.2s ease;
+	-moz-transition: all 0.2s ease;
+	-o-transition: all 0.2s ease;
+	-ms-transition: all 0.2s ease;
+}
+
+.projText:hover {
+	color: #009999;
+}
+
+.cpuMail {
+	position: absolute;
+	top: 90%;
+	left: 50%;
+	transform: translateX(-50%);
+	cursor: pointer;
+	line-height: 150%;
+	font-family: 'Play', sans-serif;
+	font-size: 0.95em;
+	color: #a6a6a6;
+}
+
+.git {
 	margin-top: 30px;
+	color: #a6a6a6;
+	position: absolute;
+	left: 50%;
+	transform: translateX(-50%);
+
+
 }
 
-.headerSchool {
-	position: relative;
-	z-index: 100;
-	text-align: center;
-	font-family: "ultimahairline";
+i {
+	-webkit-transition: all 0.2s ease;
+	-moz-transition: all 0.2s ease;
+	-o-transition: all 0.2s ease;
+	-ms-transition: all 0.2s ease;
+}
+
+#github, #bitbucket {
+	margin: 20px;
+}
+#github:hover, #bitbucket:hover {
+	color: #009999;
+}
+
+
+/*** Tab Content ***/
+
+#about {
+	position: absolute;
+	top: 80px;
+	left: -150px;
+	font-family: 'Play', sans-serif;
+}
+
+#lang {
+	position: absolute;
+	top: 170px;
+	left: -135px;
+	font-family: 'Play', sans-serif;
+}
+
+#proj {
+	position: absolute;
+	top: 260px;
+	left: -175px;
+	font-family: 'Play', sans-serif;
+}
+
+.langTitle {
+	color: #FFFFFF;
 	font-size: 2em;
-	font-weight: bold;
-	padding-top: 10px;
+
+	-webkit-transition: all 0.2s ease;
+	-moz-transition: all 0.2s ease;
+	-o-transition: all 0.2s ease;
+	-ms-transition: all 0.2s ease;
 }
 
-#info {
-	padding-top: 100px;
-	padding-bottom: 80px;
-	background: #FFFFFF;
+.langAbbr {
+	color: #FFFFFF;
+	float: right;
+	font-size: 0.8em;
+
+	-webkit-transition: all 0.2s ease;
+	-moz-transition: all 0.2s ease;
+	-o-transition: all 0.2s ease;
+	-ms-transition: all 0.2s ease;
 }
 
-#center {
-	background: #e6e6e6;
-	padding-top: 80px;
-	padding-bottom: 90px;
+.tab {
+	display: none;
 }
 
-.cn {
+.tab.active {
+	display: block;
+}
+
+#tab-links .tab-link:hover:not(.active) .langTitle{
+	text-shadow: 0 0 20px #000000;
+}
+
+#tab-links .tab-link:hover:not(.active) .langAbbr {
+	text-shadow: 0 0 20px #003300;
+}
+
+#tab-links .active a{
+	color: #003300;
+}
+
+
+/*** Footer ***/
+
+#footer {
+	position: fixed;
+	top: 93%;
+	left: 50%;
+	width: 100%;
+	transform: translateX(-50%);
+}
+
+.footerText {
+	text-align: center;
+	font-family: 'Play', sans-serif;
+	color: #FFFFFF;
+}
+
+
+
+/*** Wires ***/
+
+.aboutContentWire, .skillsContentWire, .projectsContentWire {
+	display: none;
+}
+
+.aboutContentWire.active, .skillsContentWire.active, .projectsContentWire.active {
+	display: block;
+}
+
+#cpuWires {
 	position: absolute;
-	top: 50px;
-	left: 12%;
-	z-index: 0;
+	left: 50%;
+	transform: translateX(-50%);
+	height: 400px;
 }
 
-.skyline {
-	position: absolute;
-	top: 835px;
-	left: 60%;
-	z-index: 0;
+#wires {
+	fill:none;
+	stroke:#003300;
+	stroke-width:5
+}
+
+
+/*** Modal ***/
+
+.close {
+	float: right;
+}
+
+.close:hover,
+.close:focus {
+    color: #009999;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.modal {
+	display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.4);
+}
+
+.modal-content {
+    background-color: rgba(0,0,0,0.9);
+    margin: 5% auto;
+    padding: 20px 100px 0 100px;
+    border: 1px solid #888;
+    width: 50%;
+}
+
+.modal-header {
+	color: #e6e6e6;
+	font-size: 2.5em;
+    font-family: 'Play', sans-serif;
+    margin-bottom: 30px;
+}
+
+.modal-body {
+	color: #e6e6e6;
+	margin-top: 20px;
+	font-family: 'Play', sans-serif;
+	line-height: 150%;
+	font-size: 1.1em;
+}
+
+.stubPics {
+	margin-top: 75px;
+}
+
+.demoPic {
+	position: relative;
+	padding-bottom: 75px;
+	left: 50%;
+	transform: translateX(-50%);
+	object-fit: contain;
+	max-width: 100% !important;
 }
 
 iframe {
 	position: relative;
-  	max-width: 100% !important;
-  	top: -50px;
-}
-
-#stubsSlides {
-	margin-top: 50px;
-	position: relative;
-	width: 600px;
-	height: 300px;
-}
-
-#hbSlides {
-	margin-top: 50px;
-	position: relative;
-	width: 600px;
-	height: 300px;
-}
-
-.demoPic {
-	object-fit: contain;
-	position:absolute; 
-	left:0; 
-	top:0;
+	left: 50%;
+	transform: translateX(-50%);
+	padding-bottom: 75px;
 	max-width: 100% !important;
 }
 
-.footer {
-	padding-top: 20px;
-	padding-bottom: 40px;
-	background: #e6e6e6;
-	height: 60px;
-}
-
-.footDesc {
-	position: absolute;
-	left: 50%;
-	transform: translateX(-50%);
-	font-family: "ultima";
-	font-size: 2em;
-	font-weight: bold;
-	margin-top: 30px;
-}
-
-.hidden {
-	display: none;
-}
-
-#github {
-	color: #000000;
-	position: absolute;
-	margin-left: 80px;
-	margin-top: 15px;
-
-	-webkit-transition: all 0.25s ease;
-	-moz-transition: all 0.25s ease;
-	-o-transition: all 0.25s ease;
-	-ms-transition: all 0.25s ease;
-
-}
-
-#github:hover {
-	color: #1f7a7a;
-}
-
-/* Flexbox */
-
-#projectContainer {
-	position: relative;
-	left: 50%;
-	transform: translateX(-50%);
-    padding: 50px;
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: space-around;
-
-}
-
-.projectItem {
-	margin: 20px;
-	min-width: 500px;
-	max-width: 600px;
-	margin-bottom: 40px;
-}
-
-.projectItemDesc {
-	margin: 20px;
-	min-width: 500px;
-	max-width: 600px;
-	padding-bottom: 250px;
-}
 
 
-/* Project item description */
+/*** MEDIA Q ***/
 
-.projTitle {
-	text-align: center;
-	font-family: "ultimahairline";
-	font-size: 3em;
-	font-weight: bold;
+@media (max-width: 900px) {
 
-}
-
-.descript {
-	font-family: "ultimahairline";
-	font-size: 2em;
-	font-weight: bold;
-}
-
-.descriptCenter {
-	text-align: center;
-	font-family: "ultimahairline";
-	font-size: 2em;
-	font-weight: bold;
-}
-
-.descriptTech {
-	margin-top: 40px;
-	font-family: "ultimahairline";
-	font-size: 2em;
-	font-weight: bold;
-}
-
-
-@font-face {
-   font-family: ultimahairline; 
-   src: url('ultimahairline.ttf');
-}
-
-@font-face {
-   font-family: ultima; 
-   src: url('ultima.ttf');
-}
-
-
-
-@media (max-width: 1300px) {
-
-	#stubsSlides {
-
-		width: 500px;
-
+	.modal-content {
+		padding: 20px 50px 0 50px;
 	}
 
-	#hbSlides {
-
-		width: 500px;
-
+	.stubPics {
+		margin-top: 0;
 	}
 
-	.projectItem {
-
-		max-width: 500px;
-
+	.demoPic {
+		padding-bottom: 0;
 	}
 
-	.projectItemDesc {
-
-		max-width: 500px;
-
-	}
-
-
-}
-
-
-@media (max-width: 1100px) {
-
-	.cn {
-		display:none;
-	}
-
-	.skyline {
-		display:none;
-	}
-
-}
-
-@media (max-width: 600px) {
-
-	#github {
-		display: none;
-	}
 }
