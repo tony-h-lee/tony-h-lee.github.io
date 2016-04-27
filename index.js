@@ -2,7 +2,7 @@ $(document).ready(function() {
 
 
 
-  $(['stubs3.png', 'stubs5.png','hb1.png','hb2.png','hb3.png']).preload();
+  $(['stubs3.png', 'stubs5.png','hb1.png','hb2.png']).preload();
 
 
   /*
@@ -44,9 +44,9 @@ $(document).ready(function() {
 
 
 
-    /*
-     * Modal
-     */
+    // Handle modals for projects
+
+
     $("#stubs").on('click', function() {
         $("#stubModal").fadeIn(400);
     });
@@ -77,8 +77,42 @@ $(document).ready(function() {
 
 
 
+    // Click on email, copy to clipboard
+    $("#mailCopy").on("click", function() {
+        copyToClipboard("#mailCopy");
+        $(".cpuMailHeader").text("Copied!");
 
-});
+        setTimeout(function() {
+            $(".cpuMailHeader").text("Click email to copy!");
+        }, 1300);
+    });
+    
+
+
+
+
+
+
+
+
+  });
+
+copyToClipboard = function (element) {
+    var $temp = $("<input />");
+    $("body").append($temp);
+    $temp.val($(element).text()).select();
+
+    var result = false;
+    try {
+        result = document.execCommand("copy");
+    } catch (err) {
+        console.log("Error copying email to clipboard! "+err);
+    }
+
+    $temp.remove();
+    return result;
+}
+
 
 
 $.fn.preload = function() {

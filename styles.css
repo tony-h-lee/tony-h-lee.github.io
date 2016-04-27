@@ -66,6 +66,7 @@ hr {
 
 a {
 	text-decoration: none;
+	color: #a6a6a6;
 }
 
 #cpu {
@@ -139,6 +140,17 @@ a {
 	line-height: 150%;
 	font-family: 'Play', sans-serif;
 	font-size: 0.95em;
+	color: #a6a6a6;
+}
+
+.cpuMailHeader {
+	position: absolute;
+	top: 83%;
+	left: 50%;
+	transform: translateX(-50%);
+	line-height: 150%;
+	font-family: 'Play', sans-serif;
+	font-size: 1.1em;
 	color: #a6a6a6;
 }
 
@@ -363,3 +375,4 @@ iframe {
 	}
 
 }
+
