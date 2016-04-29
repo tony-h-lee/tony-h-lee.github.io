@@ -110,9 +110,6 @@ $(document).ready(function() {
 
 function spell(current) {
 
-    console.log(current);
-    console.log(word);
-
     resetBits();
 
     // SPELL ABOUT
