@@ -299,7 +299,6 @@ i {
 	left: 60%;
 	top: 50%;
 	transform: translateY(-50%);
-	-webkit-transform: translate3d(0, 0, 0);
 	height: 400px;
 	width: 40%;
 	margin-top: 7px;
@@ -327,6 +326,7 @@ i {
     0%   {}
     25%  {opacity: 1}
     50%  {}
+    95% {opacity: 0}
     100% {left: 120px; opacity: 0}
 }
 
@@ -335,6 +335,7 @@ i {
     0%   {}
     25%  {opacity: 1}
     50%  {}
+    95% {opacity: 0}
     100% {left: 120px; opacity: 0}
 }
 
