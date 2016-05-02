@@ -315,7 +315,7 @@ i {
 	-webkit-animation-name: bitmove; /* Chrome, Safari, Opera */
     -webkit-animation-duration: 3s; /* Chrome, Safari, Opera */
     -webkit-backface-visibility: hidden;
-    -webkit-transform: translateZ(0);
+    -webkit-transform:translate3d(0,0,0);
     animation-name: bitmove;
     animation-duration: 3s;
     animation-iteration-count: infinite;
