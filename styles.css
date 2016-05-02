@@ -299,6 +299,7 @@ i {
 	left: 60%;
 	top: 50%;
 	transform: translateY(-50%);
+	-webkit-transform: translate3d(0, 0, 0);
 	height: 400px;
 	width: 40%;
 	margin-top: 7px;
@@ -314,7 +315,6 @@ i {
 
 	-webkit-animation-name: bitmove; /* Chrome, Safari, Opera */
     -webkit-animation-duration: 3s; /* Chrome, Safari, Opera */
-    -webkit-transform: translate(100px, 100px);
     -webkit-transform-style: preserve-3d;
     animation-name: bitmove;
     animation-duration: 3s;
